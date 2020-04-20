@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./assignment1.component.css']
 })
 export class Assignment1Component {
+  userInput: String = "";
+
+  show(inputName: HTMLInputElement) {
+    // console.log(inputName.value);
+    this.userInput = inputName.value;
+  }
 
 }

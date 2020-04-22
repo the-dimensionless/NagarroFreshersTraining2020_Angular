@@ -9,6 +9,16 @@ import { Todo } from 'src/app/05_assignment/assignment.component';
 export class Assignment2Component {
   @Input() todos: Todo[];
 
+  styler: any;
+
+  change(item) {
+    this.styler = item;
+  };
+
+  isActive(item) {
+    return this.styler === item;
+  };
+
   // Testing 
   /*  ngOnChanges() {
      console.log(this.todos);

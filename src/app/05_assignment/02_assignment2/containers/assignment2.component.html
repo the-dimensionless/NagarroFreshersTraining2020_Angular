@@ -18,13 +18,12 @@
           <th>Completed</th>
         </tr>
 
-        <tr *ngFor="let item of todos">
+        <tr *ngFor="let item of todos" [ngClass]="{active: isActive(item)}" (click)="change(item)">
           <td> {{item.id}} </td>
           <td> {{item.type}} </td>
           <td> {{item.description}} </td>
           <td> {{item.completed}} </td>
         </tr>
-
 
       </table>
     </div>
